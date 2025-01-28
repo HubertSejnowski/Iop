@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -16,6 +16,13 @@ bool czy_doskonala(int liczba) {
 int main() {
     int liczba;
     cin >> liczba;
+
+    if (liczba <= 0) {
+        cout << "Liczba musi być dodatnią liczbą naturalną!" << endl;
+        return 1;
+    }
+
     cout << liczba << (czy_doskonala(liczba) ? " jest doskonała" : " nie jest doskonała") << endl;
+
     return 0;
 }
